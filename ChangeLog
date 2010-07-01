@@ -1,5 +1,12 @@
 = Revision history for jekyll-pagination
 
+== 0.0.2 [2010-07-01]
+
+* Cleanup and documentation.
+	* Overwriting Pagination#paginate was obsoleted by overwriting Page#dir=
+	* Provide aliases to original methods
+* Credits.
+
 == 0.0.1 [2010-06-30]
 
 * Birthday :-)
