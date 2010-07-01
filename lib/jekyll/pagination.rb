@@ -28,33 +28,12 @@
 
 module Jekyll
 
-  class Pagination
-
-    def paginate(site, page)
-      posts = site.site_payload['site']['posts']
-
-      total = Pager.calculate_pages(posts, site.config['paginate'].to_i)
-
-      1.upto(total) { |num|
-        pager = Pager.new(site.config, num, posts, total)
-
-        if num > 1
-          newpage = Page.new(site, site.source, page.dir, page.name)
-
-          newpage.pager = pager
-          newpage.dir   = File.join(page.dir, "page#{num}")
-
-          site.pages << newpage
-        else
-          page.pager = pager
-        end
-      }
-    end
-
-  end
-
   class Page
 
+    alias_method :_pagination_original_dir=, :dir=
+
+    # Overwrites the original method to also set +basename+ when there's
+    # a +pager+. NOTE: Depends on +pager+ being set before setting +dir+.
     def dir=(dir)
       @basename = 'index' if @pager
       @dir = dir
@@ -64,11 +43,19 @@ module Jekyll
 
   class Pager
 
-    def self.pagination_enabled?(config, file)
-      if config['paginate']
-        config['paginate_files'] ||= ['index.html']
-        config.pluralized_array('paginate_file', 'paginate_files').include?(file)
+    class << self
+
+      alias_method :_pagination_original_pagination_enabled?, :pagination_enabled?
+
+      # Overwrites the original method to check +paginate_file+ and
+      # +paginate_files+ configuration options.
+      def pagination_enabled?(config, file)
+        if config['paginate']
+          config['paginate_files'] ||= ['index.html']
+          config.pluralized_array('paginate_file', 'paginate_files').include?(file)
+        end
       end
+
     end
 
   end
