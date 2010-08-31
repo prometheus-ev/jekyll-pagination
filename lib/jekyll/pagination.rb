@@ -45,15 +45,17 @@ module Jekyll
 
     class << self
 
+      def paginate_files(config)
+        config['paginate_files'] ||= ['index.html']
+        config.pluralized_array('paginate_file', 'paginate_files')
+      end
+
       alias_method :_pagination_original_pagination_enabled?, :pagination_enabled?
 
       # Overwrites the original method to check +paginate_file+ and
       # +paginate_files+ configuration options.
       def pagination_enabled?(config, file)
-        if config['paginate']
-          config['paginate_files'] ||= ['index.html']
-          config.pluralized_array('paginate_file', 'paginate_files').include?(file)
-        end
+        paginate_files(config).include?(file) if config['paginate']
       end
 
     end
