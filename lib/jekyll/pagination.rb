@@ -39,6 +39,15 @@ module Jekyll
       @dir = dir
     end
 
+    alias_method:_pagination_original_index?, :index?
+
+    # Overwrites the original method to also include the configured
+    # paginate file(s) in the evaluation.
+    def index?
+      # basename == @site.config['paginate_file'].sub('.html', '')
+      [@site.config['paginate_file']].flatten.map { |f| f.sub('.html', '') }.include?(basename)
+    end
+
   end
 
   class Pager

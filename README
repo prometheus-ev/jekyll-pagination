@@ -13,7 +13,18 @@ Add the following to your <tt>_plugins/ext.rb</tt> file:
 
   require 'jekyll-pagination'
 
-Then set +paginate_file+ or +paginate_files+ in your <tt>_config.yml</tt>.
+Then set +paginate_file+ or +paginate_files+ in your <tt>_config.yml</tt> like:
+
+ paginate: 10
+ paginate_file: blog.html
+
+or
+
+ paginate: 10
+ paginate_files:
+ - blog.html
+ - projects.html
+
 The default is to paginate the <tt>index.html</tt> file.
 
 
