@@ -1,5 +1,9 @@
 = Revision history for jekyll-pagination
 
+== 0.0.3 [2010-09-16]
+
+* Fix handling of custom permalinks with alternative paginate files
+
 == 0.0.2 [2010-07-01]
 
 * Cleanup and documentation.
