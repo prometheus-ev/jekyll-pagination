@@ -56,7 +56,7 @@
     </tr>
     <tr class="top-aligned-row">
       <td><strong>Last Update:</strong></td>
-      <td>Thu Jul 01 12:21:13 +0200 2010</td>
+      <td>Thu Sep 16 17:24:50 +0200 2010</td>
     </tr>
     </table>
   </div>
@@ -72,7 +72,7 @@
       <h1>jekyll-pagination - <a href="../classes/Jekyll.html">Jekyll</a> plugin to extend the pagination generator.</h1>
 <h2>VERSION</h2>
 <p>
-This documentation refers to jekyll-pagination version 0.0.2
+This documentation refers to jekyll-pagination version 0.0.3
 </p>
 <h2>DESCRIPTION</h2>
 <p>
@@ -87,8 +87,23 @@ Add the following to your <tt>_plugins/ext.rb</tt> file:
 </pre>
 <p>
 Then set <tt>paginate_file</tt> or <tt>paginate_files</tt> in your
-<tt>_config.yml</tt>. The default is to paginate the <tt>index.html</tt>
-file.
+<tt>_config.yml</tt> like:
+</p>
+<pre>
+ paginate: 10
+ paginate_file: blog.html
+</pre>
+<p>
+or
+</p>
+<pre>
+ paginate: 10
+ paginate_files:
+ - blog.html
+ - projects.html
+</pre>
+<p>
+The default is to paginate the <tt>index.html</tt> file.
 </p>
 <h2>LINKS</h2>
 <p>

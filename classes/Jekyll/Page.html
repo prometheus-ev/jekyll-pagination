@@ -86,7 +86,8 @@
       <h3 class="section-bar">Methods</h3>
 
       <div class="name-list">
-      <a href="#M000004">dir=</a>&nbsp;&nbsp;
+      <a href="#M000005">dir=</a>&nbsp;&nbsp;
+      <a href="#M000006">index?</a>&nbsp;&nbsp;
       </div>
     </div>
 
@@ -109,6 +110,11 @@
           <td>-&gt;</td>
           <td class="context-item-value">_pagination_original_dir=</td>
         </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">index?</td>
+          <td>-&gt;</td>
+          <td class="context-item-value">_pagination_original_index?</td>
+        </tr>
                         </table>
       </div>
     </div>
@@ -121,11 +127,11 @@
     <div id="methods">
       <h3 class="section-bar">Public Instance methods</h3>
 
-      <div id="method-M000004" class="method-detail">
-        <a name="M000004"></a>
+      <div id="method-M000005" class="method-detail">
+        <a name="M000005"></a>
 
         <div class="method-heading">
-          <a href="#M000004" class="method-signature">
+          <a href="#M000005" class="method-signature">
           <span class="method-name">dir=</span><span class="method-args">(dir)</span>
           </a>
         </div>
@@ -137,14 +143,41 @@ there&#8216;s a <tt>pager</tt>. NOTE: Depends on <tt>pager</tt> being set
 before setting <tt>dir</tt>.
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000004-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000004-source">
+            onclick="toggleCode('M000005-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000005-source">
 <pre>
     <span class="ruby-comment cmt"># File lib/jekyll/pagination.rb, line 37</span>
 37:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">dir=</span>(<span class="ruby-identifier">dir</span>)
 38:       <span class="ruby-ivar">@basename</span> = <span class="ruby-value str">'index'</span> <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@pager</span>
 39:       <span class="ruby-ivar">@dir</span> = <span class="ruby-identifier">dir</span>
 40:     <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000006" class="method-detail">
+        <a name="M000006"></a>
+
+        <div class="method-heading">
+          <a href="#M000006" class="method-signature">
+          <span class="method-name">index?</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Overwrites the original method to also include the configured paginate
+file(s) in the evaluation.
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000006-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000006-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/jekyll/pagination.rb, line 46</span>
+46:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">index?</span>
+47:       <span class="ruby-constant">Pager</span>.<span class="ruby-identifier">paginate_files</span>(<span class="ruby-ivar">@site</span>.<span class="ruby-identifier">config</span>).<span class="ruby-identifier">include?</span>(<span class="ruby-node">&quot;#{basename}.html&quot;</span>)
+48:     <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>

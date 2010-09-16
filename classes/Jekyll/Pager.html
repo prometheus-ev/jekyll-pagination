@@ -86,7 +86,8 @@
       <h3 class="section-bar">Methods</h3>
 
       <div class="name-list">
-      <a href="#M000001">pagination_enabled?</a>&nbsp;&nbsp;
+      <a href="#M000001">paginate_files</a>&nbsp;&nbsp;
+      <a href="#M000002">pagination_enabled?</a>&nbsp;&nbsp;
       </div>
     </div>
 
@@ -126,26 +127,47 @@
 
         <div class="method-heading">
           <a href="#M000001" class="method-signature">
+          <span class="method-name">paginate_files</span><span class="method-args">(config)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000001-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000001-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/jekyll/pagination.rb, line 56</span>
+56:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">paginate_files</span>(<span class="ruby-identifier">config</span>)
+57:         <span class="ruby-identifier">config</span>[<span class="ruby-value str">'paginate_files'</span>] <span class="ruby-operator">||=</span> [<span class="ruby-value str">'index.html'</span>]
+58:         <span class="ruby-identifier">config</span>.<span class="ruby-identifier">pluralized_array</span>(<span class="ruby-value str">'paginate_file'</span>, <span class="ruby-value str">'paginate_files'</span>)
+59:       <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000002" class="method-detail">
+        <a name="M000002"></a>
+
+        <div class="method-heading">
+          <a href="#M000002" class="method-signature">
           <span class="method-name">pagination_enabled?</span><span class="method-args">(config, file)</span>
           </a>
         </div>
       
         <div class="method-description">
           <p>
-Overwrites the original method to check <tt>paginate_file</tt> and
-<tt>paginate_files</tt> configuration options.
+Overwrites the original method to check <tt>paginate_file</tt> and <tt><a
+href="Pager.html#M000001">paginate_files</a></tt> configuration options.
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000001-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000001-source">
+            onclick="toggleCode('M000002-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000002-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/jekyll/pagination.rb, line 52</span>
-52:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">pagination_enabled?</span>(<span class="ruby-identifier">config</span>, <span class="ruby-identifier">file</span>)
-53:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">config</span>[<span class="ruby-value str">'paginate'</span>]
-54:           <span class="ruby-identifier">config</span>[<span class="ruby-value str">'paginate_files'</span>] <span class="ruby-operator">||=</span> [<span class="ruby-value str">'index.html'</span>]
-55:           <span class="ruby-identifier">config</span>.<span class="ruby-identifier">pluralized_array</span>(<span class="ruby-value str">'paginate_file'</span>, <span class="ruby-value str">'paginate_files'</span>).<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">file</span>)
-56:         <span class="ruby-keyword kw">end</span>
-57:       <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File lib/jekyll/pagination.rb, line 65</span>
+65:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">pagination_enabled?</span>(<span class="ruby-identifier">config</span>, <span class="ruby-identifier">file</span>)
+66:         <span class="ruby-identifier">paginate_files</span>(<span class="ruby-identifier">config</span>).<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">file</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">config</span>[<span class="ruby-value str">'paginate'</span>]
+67:       <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
