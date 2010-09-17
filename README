@@ -11,7 +11,7 @@ Jekyll plugin to extend the pagination generator.
 
 Add the following to your <tt>_plugins/ext.rb</tt> file:
 
-  require 'jekyll-pagination'
+  require 'jekyll/pagination'
 
 Then set +paginate_file+ or +paginate_files+ in your <tt>_config.yml</tt> like:
 
