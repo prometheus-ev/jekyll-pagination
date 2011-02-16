@@ -1,4 +1,4 @@
-require %q{lib/jekyll/pagination/version}
+require File.expand_path(%q{../lib/jekyll/pagination/version}, __FILE__)
 
 begin
   require 'hen'
@@ -10,17 +10,13 @@ begin
       :summary      => %q{Jekyll plugin to extend the pagination generator.},
       :authors      => ['Jens Wille', 'Arne Eilermann'],
       :email        => ['jens.wille@uni-koeln.de', 'eilermann@lavabit.com'],
-      :homepage     => 'http://github.com/blackwinter/jekyll-pagination',
-      :files        => FileList['lib/**/*.rb'].to_a,
-      :extra_files  => FileList['[A-Z]*'].to_a,
+      :homepage     => :blackwinter,
       :dependencies => %w[]
     }
   }}
 rescue LoadError => err
   warn "Please install the `hen' gem. (#{err})"
 end
-
-### Place your custom Rake tasks here.
 
 begin
   require 'jekyll/testtasks/rake'
