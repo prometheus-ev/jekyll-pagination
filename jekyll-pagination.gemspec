@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.authors = ["Jens Wille", "Arne Eilermann"]
   s.date = %q{2011-04-29}
   s.description = %q{Jekyll plugin to extend the pagination generator.}
-  s.email = ["jens.wille@uni-koeln.de", "eilermann@lavabit.com"]
+  s.email = ["jens.wille@gmail.com", "eilermann@lavabit.com"]
   s.extra_rdoc_files = ["README", "COPYING", "ChangeLog"]
   s.files = ["lib/jekyll/pagination/version.rb", "lib/jekyll/pagination.rb", "README", "ChangeLog", "Rakefile", "COPYING"]
   s.homepage = %q{http://github.com/blackwinter/jekyll-pagination}

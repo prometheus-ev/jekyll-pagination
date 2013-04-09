@@ -9,7 +9,7 @@ begin
       :version      => Jekyll::Pagination::VERSION,
       :summary      => %q{Jekyll plugin to extend the pagination generator.},
       :authors      => ['Jens Wille', 'Arne Eilermann'],
-      :email        => ['jens.wille@uni-koeln.de', 'eilermann@lavabit.com'],
+      :email        => ['jens.wille@gmail.com', 'eilermann@lavabit.com'],
       :homepage     => :blackwinter,
       :dependencies => %w[]
     }
