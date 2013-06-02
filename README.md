@@ -1,48 +1,53 @@
-= jekyll-pagination - Jekyll plugin to extend the pagination generator.
+# jekyll-pagination - Jekyll plugin to extend the pagination generator.
 
-== VERSION
+## VERSION
 
 This documentation refers to jekyll-pagination version 0.0.4
 
 
-== DESCRIPTION
+## DESCRIPTION
 
 Jekyll plugin to extend the pagination generator.
 
-Add the following to your <tt>_plugins/ext.rb</tt> file:
+Add the following to your ```_plugins/ext.rb``` file:
 
-  require 'jekyll/pagination'
+```ruby
+require 'jekyll/pagination'
+```
 
-Then set +paginate_file+ or +paginate_files+ in your <tt>_config.yml</tt> like:
+Then set ```+paginate_file+``` or ```+paginate_files+``` in your ```_config.yml``` like:
 
- paginate: 10
- paginate_file: blog.html
+```yaml
+paginate: 10
+paginate_file: blog.html
+```
 
 or
 
- paginate: 10
- paginate_files:
- - blog.html
- - projects.html
+```yaml
+paginate: 10
+paginate_files:
+- blog.html
+- projects.html
+```
 
-The default is to paginate the <tt>index.html</tt> file.
+The default is to paginate the ```index.html``` file.
 
 
-== LINKS
+## LINKS
 
-<b></b>
 Documentation:: http://blackwinter.github.com/jekyll-pagination
 Source code::   http://github.com/blackwinter/jekyll-pagination
 RubyGem::       http://rubygems.org/gems/jekyll-pagination
 
 
-== AUTHORS
+## AUTHORS
 
-* Jens Wille <mailto:jens.wille@gmail.com>
-* Arne Eilermann <mailto:eilermann@lavabit.com>
+* [Jens Wille](mailto:jens.wille@gmail.com)
+* [Arne Eilermann](mailto:eilermann@lavabit.com)
 
 
-== LICENSE AND COPYRIGHT
+# LICENSE AND COPYRIGHT
 
 Copyright (C) 2010-2012 University of Cologne,
 Albertus-Magnus-Platz, 50923 Cologne, Germany
@@ -60,4 +65,4 @@ FITNESS FOR A PARTICULAR PURPOSE. See the GNU Affero General Public License
 for more details.
 
 You should have received a copy of the GNU Affero General Public License along
-with jekyll-pagination. If not, see <http://www.gnu.org/licenses/>.
+with jekyll-pagination. If not, see [http://www.gnu.org/licenses/](http://www.gnu.org/licenses/)
