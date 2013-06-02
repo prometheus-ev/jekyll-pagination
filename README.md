@@ -38,11 +38,10 @@ The default is to paginate the ```index.html``` file.
 
 ## LINKS
 
-Documentation:: http://blackwinter.github.com/jekyll-pagination
-
-Source code::   http://github.com/blackwinter/jekyll-pagination
-
-RubyGem::       http://rubygems.org/gems/jekyll-pagination
+| --------------- | ----------------------------------------------- |
+| Documentation   | http://blackwinter.github.com/jekyll-pagination |
+| Source code     | http://github.com/blackwinter/jekyll-pagination |
+| RubyGem         | http://rubygems.org/gems/jekyll-pagination      |
 
 
 ## AUTHORS
