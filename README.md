@@ -38,7 +38,7 @@ The default is to paginate the ```index.html``` file.
 
 ## LINKS
 
-|                 |                                                 |
+| LINKS           ||
 | --------------- | ----------------------------------------------- |
 | Documentation   | http://blackwinter.github.com/jekyll-pagination |
 | Source code     | http://github.com/blackwinter/jekyll-pagination |
