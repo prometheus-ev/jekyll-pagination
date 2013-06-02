@@ -1,4 +1,6 @@
-# jekyll-pagination - Jekyll plugin to extend the pagination generator.
+# jekyll-pagination
+
+Jekyll plugin to extend the pagination generator.
 
 ## VERSION
 
@@ -37,7 +39,9 @@ The default is to paginate the ```index.html``` file.
 ## LINKS
 
 Documentation:: http://blackwinter.github.com/jekyll-pagination
+
 Source code::   http://github.com/blackwinter/jekyll-pagination
+
 RubyGem::       http://rubygems.org/gems/jekyll-pagination
 
 
@@ -65,4 +69,4 @@ FITNESS FOR A PARTICULAR PURPOSE. See the GNU Affero General Public License
 for more details.
 
 You should have received a copy of the GNU Affero General Public License along
-with jekyll-pagination. If not, see [http://www.gnu.org/licenses/](http://www.gnu.org/licenses/)
+with jekyll-pagination. If not, see [GNU Licenses](http://www.gnu.org/licenses/)
