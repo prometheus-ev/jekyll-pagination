@@ -10,6 +10,7 @@ begin
       :summary      => %q{Jekyll plugin to extend the pagination generator.},
       :authors      => ['Jens Wille', 'Arne Eilermann'],
       :email        => ['jens.wille@gmail.com', 'eilermann@lavabit.com'],
+      :license      => %q{AGPL},
       :homepage     => :blackwinter,
       :dependencies => %w[]
     }
