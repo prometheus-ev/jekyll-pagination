@@ -64,8 +64,23 @@ module Jekyll
 
       # Overwrites the original method to check +paginate_file+ and
       # +paginate_files+ configuration options.
-      def pagination_enabled?(config, file)
-        paginate_files(config).include?(file) if config['paginate']
+      def pagination_enabled?(config_or_site, file_or_page = nil)
+        if file_or_page  # < 1.1
+          config = config_or_site
+
+          if config['paginate']
+            file = unless file_or_page.is_a?(String)  # >= 1.0
+              file_or_page.name
+            else  # < 1.0
+              file_or_page
+            end
+
+            paginate_files(config).include?(file)
+          end
+        else  # >= 1.1
+          site = config_or_site
+          _pagination_original_pagination_enabled?(site)
+        end
       end
 
     end
